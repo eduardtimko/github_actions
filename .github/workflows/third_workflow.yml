@@ -1,0 +1,23 @@
+name: 'Second workflow'
+on:
+  - push
+
+jobs:
+  first-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Copy files
+        run: |
+          git init
+          git remote add origin "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}github.com/$GITHUB_REPOSITORY.git"
+          git fetch origin 
+          git checkout main
+      - name: Print catalog
+        run: |
+          pwd
+          ls -a
+      - name: Print variables
+        run: |
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_ACTOR
+
