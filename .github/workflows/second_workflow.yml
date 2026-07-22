@@ -1,0 +1,13 @@
+name: 'First workflow'
+on:
+  - push
+
+jobs:
+  first-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Second step
+        run: |
+          pwd
+          ls -a
+
