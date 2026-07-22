@@ -6,8 +6,6 @@ jobs:
   first-command:
     runs-on: ubuntu-latest
     steps:
-      - name: Print directory
-        run: |
-          pwd
-          ls -a
+      - name: Checkout
+        uses: actions/checkout@v7
 
