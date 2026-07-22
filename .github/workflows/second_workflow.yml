@@ -1,4 +1,4 @@
-name: 'First workflow'
+name: 'Second workflow'
 on:
   - push
 
@@ -6,7 +6,7 @@ jobs:
   first-command:
     runs-on: ubuntu-latest
     steps:
-      - name: Second step
+      - name: Print directory
         run: |
           pwd
           ls -a
