@@ -8,4 +8,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+      - name: Print catalog
+        run: |
+          pwd
+          ls -a
 
