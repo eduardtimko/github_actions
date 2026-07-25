@@ -1,0 +1,10 @@
+name: 'Seventh workflow'
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Каждый день в 00:00
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Выполняем ежедневный бэкап"

@@ -1,0 +1,15 @@
+name: 'Fifth workflow'
+on:
+  - push
+
+jobs:
+  first-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: First step
+        run: echo "Some text"
+      - name: Second step
+        run: |
+          node -v
+          npm -v
+
