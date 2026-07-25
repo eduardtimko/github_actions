@@ -1,9 +1,16 @@
 name: 'Eighth workflow'
 on:
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      titleCustom:
+        type: string
+        description: Title
+        required: true
+        default: "Hello world"
 
 jobs:
   backup:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello world"
+      - name: "Print values from titleCustom"
+        run: echo "Title ${{ inputs.titleCustom }}"
