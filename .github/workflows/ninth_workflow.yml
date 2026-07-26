@@ -9,4 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Print github object"
-        run: echo ${{ toJson(github) }}
+        id: context-expression
+        run: |
+          echo "${{ toJson(github) }}"
+          echo "${{ toJson(runner) }}"
+          echo "${{ toJson(job) }}"
+          echo "${{ toJson(steps) }}"
