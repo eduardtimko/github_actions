@@ -1,0 +1,12 @@
+name: 'Ninth workflow'
+on:
+ push:
+   branches:
+     - main
+
+jobs:
+  first-commad:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Print github object"
+        run: echo ${{ toJson(github) }}
