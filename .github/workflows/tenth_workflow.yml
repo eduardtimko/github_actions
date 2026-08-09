@@ -7,8 +7,6 @@ on:
 jobs:
   first:
     runs-on: ubuntu-latest
-    env:
-      CUSTOM_VAR: JOB FIRST
     steps:
       - name: "Print github env"
         run: |
