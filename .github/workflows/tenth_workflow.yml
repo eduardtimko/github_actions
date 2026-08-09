@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: "Print github env"
         run: |
-          echo $CUSTOM_VAR
+          echo '${{ vars.CUSTOM_VAR }}'
