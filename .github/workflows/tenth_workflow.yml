@@ -10,6 +10,6 @@ jobs:
     env:
       CUSTOM_VAR: JOB FIRST
     steps:
-      name: "Print github env"
-      run: |
-        echo $CUSTOM_VAR
+      - name: "Print github env"
+        run: |
+          echo $CUSTOM_VAR
