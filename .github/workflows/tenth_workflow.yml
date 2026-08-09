@@ -11,3 +11,4 @@ jobs:
       - name: "Print github env"
         run: |
           echo '${{ vars.CUSTOM_VAR }}'
+          echo '${{ secrets.PASSWORD }}'
